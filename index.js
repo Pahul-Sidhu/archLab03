@@ -25,6 +25,10 @@ app.get('/writeFile', async (req, res) => {
     }
 });
 
+app.get('/', async (req, res) => {
+    res.send('Hello world');
+});
+
 // Route to read and display the content of a file
 app.get('readFile/:file_name', async (req, res) => {
     const fileName = req.params.file_name;
